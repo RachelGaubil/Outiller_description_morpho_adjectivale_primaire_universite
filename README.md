@@ -34,6 +34,10 @@ C'est pourquoi je vais la présenter ici. Les dossiers sont en gras et les fichi
     * *CE1.csv*
     * ...
 
+* **guides**
+  * *guide_de_transcription_v1.6.pdf*
+  * ùguide_normalisation_6mai2019.pdf*
+
 * **module_enrichissement**
   * *module_enrichissement.py*
   * *Lexique383.tsv*
