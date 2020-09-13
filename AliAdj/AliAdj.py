@@ -17,8 +17,8 @@ Il produit des fichiers (.csv) contenant les informations des fichiers à
 traiter plus les découpages et les types d'erreur.
 '''
 
-import os
 
+import os
 
 
 '''
@@ -351,7 +351,7 @@ if __name__ == '__main__':
 	modeles = recup_modeles("modelisation/modeles.txt")
 	
 	#ouverture du fichier rapportant les possibles erreurs du système
-	rappErr = open("rapportErreur.txt",encoding="utf8",mode="w")
+	rappErr = open("rapportErreurs.txt",encoding="utf8",mode="w")
 	
 	fichiers = os.listdir("../corpus/")
 	if not os.path.exists("resultats"):
