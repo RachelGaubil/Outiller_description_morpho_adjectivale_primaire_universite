@@ -17,7 +17,7 @@ C'est pourquoi je vais la présenter ici. Les dossiers sont en gras et les fichi
 
 * **AliAdj**
   * *AliAdj.py*
-  * *rapportErreur.txt*
+  * *rapportErreurs.txt*
   * **modelisation** 
     * *lexique.txt*
     * *modeles.txt*
