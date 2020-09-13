@@ -2,13 +2,17 @@
 
 **TRAITEMENT GENERAL**
 
-S'il y a de nouveau fichiers à traiter, il faut suivre les étapes suivantes :
+S'il y a de nouveau fichiers à traiter :
   - Ajouter les nouveaux adjectifs s'il y en a et leur modèle de comportement flexionnel dans **AliAdj** > **modelisation** > *lexique.txt*
   - Ajouter les nouveaux fichiers (ou mettre à jour les anciens) dans **module_enrichissement** > **sorties_AliScol**
   - Lancer **module_enrichissement** > *module_enrichissement.py* (les résultats apparaîtront dans **module_enrichissement** > **corpus_enrichi**)
   - Remplacer le contenu de **corpus** par le contenu de **module_enrichissement** > **corpus_enrichi**
+Si l'on veut des statistiques sur le corpus :
+  - Relancer **statistiques** > *stats_corpus.py* (les résultats apparaîtront dans **statistiques** > *stats_corpus.csv*)
+Si l'on veut effectuer le traitement des adjectifs (découpage + déclaration du type d'erreur)
   - Relancer **AliAdj** > *AliAdj.py* (les résultats apparaîtront dans **AliAdj** > **resultats**)
-  - Relancer **statistiques** > *stats_erreurs.py* (les résultats apparaîtront dans **statistiques** > *stats_erreurs.txt*)
+Si l'on veut des statistiques sur les erreurs :
+  - Relancer **statistiques** > *stats_erreurs.py* (les résultats apparaîtront dans **statistiques** > *stats_erreurs.csv*)
 
 **HIERARCHIE ET NOMINATION**
 
@@ -52,5 +56,7 @@ C'est pourquoi je vais la présenter ici. Les dossiers sont en gras et les fichi
     * ...
 
 * **statistiques**
+  * *stats_corpus.py*
+  * *stats_corpus.csv*
   * *stats_erreurs.py*
   * *stats_erreurs.csv*
