@@ -20,7 +20,7 @@ Si l'on veut des statistiques sur les erreurs :
 **HIERARCHIE ET NOMINATION**
 
 La hiérarchie et la nomination de certains documents est importante si l'on veut pouvoir lancer les scripts sans avoir à les modifier.
-C'est pourquoi je vais la présenter ici. Les dossiers sont en gras et les fichiers en italique.
+C'est pourquoi je vais les présenter ici. Les dossiers sont en gras et les fichiers en italique.
 
 * **AliAdj**
   * *AliAdj.py*
