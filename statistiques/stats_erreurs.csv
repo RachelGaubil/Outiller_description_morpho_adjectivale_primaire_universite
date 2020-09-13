@@ -1,0 +1,23 @@
+Niveau	Mots normes	Erreurs bases	Erreurs flexions genre	Erreurs flexions nombre
+3eme	84,03	7,6	5,7	5,32
+CE1	53,24	35,96	9,66	11,56
+CE2	65,44	22,94	9,02	10,75
+CM1	69,85	18,73	8,05	9,94
+CP	56,99	32,26	11,02	12,63
+licence1	95,45	2,27	0,0	2,27
+
+Niveau	Mots Normés	Erreurs bases	Erreurs bases + flexions	Erreurs flexions
+3eme	84,03	5,89	1,71	8,37
+CE1	53,24	27,32	8,64	10,8
+CE2	65,44	16,52	6,42	11,62
+CM1	69,85	13,48	5,25	11,42
+CP	56,99	20,43	11,83	10,75
+licence1	95,45	2,27	0,0	2,27
+
+Niveau	Bases normées	Erreurs bases	flexions normées	Erreurs flexions
+3eme	92,4	7,6	89,92	10,08
+CE1	64,03999999999999	35,96	80,56	19,44
+CE2	77,06	22,94	81,96000000000001	18,04
+CM1	81,27	18,73	83,32	16,68
+CP	67,74000000000001	32,26	77,42	22,58
+licence1	97,73	2,27	97,73	2,27
