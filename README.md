@@ -2,7 +2,7 @@
 
 **TRAITEMENT GENERAL**
 
-S'il y a de nouveau fichiers à traiter :
+S'il y a de nouveaux fichiers à traiter :
   - Ajouter les nouveaux adjectifs s'il y en a et leur modèle de comportement flexionnel dans **AliAdj** > **modelisation** > *lexique.txt*
   - Ajouter les nouveaux fichiers (ou mettre à jour les anciens) dans **module_enrichissement** > **sorties_AliScol**
   - Lancer **module_enrichissement** > *module_enrichissement.py* (les résultats apparaîtront dans **module_enrichissement** > **corpus_enrichi**)
