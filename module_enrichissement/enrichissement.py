@@ -22,15 +22,15 @@ Si relancement de cette fonction, bien penser à supprimer le dossier
 '''
 def extract_lexique():
 	
-	lexique_complet = open("entrees/Lexique383.tsv", encoding="UTF8", mode="r")
+	lexique_complet = open("Lexique383.tsv", encoding="UTF8", mode="r")
 	next(lexique_complet)
 	
-	if not os.path.exists("entrees/donnees_temporaires"):
-		os.mkdir("entrees/donnees_temporaires")
+	if not os.path.exists("donnees_temporaires"):
+		os.mkdir("donnees_temporaires")
 	
 	#Création d'un dico associatif (shelve) pour stocker les données
 	#clef : "mot cat", valeur : "lemme genre nombre infover"
-	with shelve.open("entrees/donnees_temporaires/lexique.dat") as lexique :
+	with shelve.open("donnees_temporaires/lexique.dat") as lexique :
 		
 		i=0
 		
@@ -100,19 +100,19 @@ def recherche_infos(mot, cat, lexique):
 But : fonction qui  complète les sorties de l'aligneur en y ajoutant les
       informations (si existantes) genre, nombre et infover aux mots.
       Pour cela elle part des sorties de l'aligneur (.csv) et recompose 
-      le corpus dans un autre dossier (corpus_enrichis)
+      le corpus dans un autre dossier (corpus_enrichi)
 Entrée : nom du fichier à compléter (chaîne)
 '''
 def ajout_infos(nom_fic):
 	
-	entree = open("entrees/sorties_aligneur/"+nom_fic, encoding="UTF8", mode="r")
+	entree = open("sorties_AliScol/"+nom_fic, encoding="UTF8", mode="r")
 	sortie = open("corpus_enrichi/"+nom_fic, encoding="UTF8", mode="w")
 	
 	#ligne d'en-têtes
 	sortie.write(entree.readline().strip()+"\tGenre\tNombre\tInfover\n")
 	
 	
-	with shelve.open("entrees/donnees_temporaires/lexique.dat") as lexique :
+	with shelve.open("donnees_temporaires/lexique.dat") as lexique :
 		
 		for ligne in entree :
 			
@@ -229,7 +229,7 @@ if __name__ == '__main__':
 	if not os.path.exists("corpus_enrichi"):
 		os.mkdir("corpus_enrichi")
 	
-	sorties_aligneur = os.listdir("entrees/sorties_aligneur")
+	sorties_AliScol = os.listdir("sorties_AliScol")
 	
-	for fichier in sorties_aligneur:
+	for fichier in sorties_AliScol:
 		ajout_infos(fichier)
