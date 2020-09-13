@@ -11,7 +11,7 @@ S'il y a de nouveaux fichiers à traiter :
 Si l'on veut des statistiques sur le corpus :
   - Relancer **statistiques** > *stats_corpus.py* (les résultats apparaîtront dans **statistiques** > *stats_corpus.csv*)
 
-Si l'on veut effectuer le traitement des adjectifs (découpage + déclaration du type d'erreur)
+Si l'on veut effectuer le traitement des adjectifs (découpage + identification du type d'erreur)
   - Relancer **AliAdj** > *AliAdj.py* (les résultats apparaîtront dans **AliAdj** > **resultats**)
 
 Si l'on veut des statistiques sur les erreurs :
