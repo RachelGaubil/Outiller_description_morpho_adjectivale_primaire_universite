@@ -347,8 +347,8 @@ Main : Récupération dans le corpus des données nécessaires soient uniquement
 '''
 if __name__ == '__main__':
 	
-	lexique = recup_lexique("lexique.txt")
-	modeles = recup_modeles("modeles.txt")
+	lexique = recup_lexique("modelisation/lexique.txt")
+	modeles = recup_modeles("modelisation/modeles.txt")
 	
 	#ouverture du fichier rapportant les possibles erreurs du système
 	rappErr = open("rapportErreur.txt",encoding="utf8",mode="w")
