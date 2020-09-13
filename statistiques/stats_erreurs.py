@@ -8,7 +8,17 @@ repérés grâce à AliAdj.
 
 import os
 
-
+'''
+But : extraire des statistiques des résultats d'AliAdj
+Entrée : fichier (.csv) produit par AliAdj
+Sortie : statistiques suivantes :
+		 err_base_genre_nombre = mots normés vs bases erronées
+								vs flex genre erronées vs flex nb erronées
+		 err_base_genre_nb = mots normés vs bases erronées
+							vs base+flexions erronées vs flex erronées
+		 normes_base_genre_nb = bases normees vs bases erronées
+								+ flexions normées vs flexions erronées
+'''
 def stats(dossier,fichier):
 	
 	fichier_entree = open(dossier+fichier,encoding="utf8",mode="r")
@@ -80,7 +90,7 @@ def stats(dossier,fichier):
 	tx_base_normee = 100-tx_err_base
 	tx_err_base_unique = round(base_unique*100/totalAdj,2)
 	
-	#Erreurs genre_nbions
+	#Erreurs flexions
 	tx_err_genre_nb = round(genre_nb*100/totalAdj,2)
 	tx_genre_nb_normes = 100-tx_err_genre_nb
 	tx_err_genre_nb_unique=round(genre_nb_unique*100/totalAdj,2)
@@ -99,6 +109,12 @@ def stats(dossier,fichier):
 	
 	return(nom_fichier+"\t"+err_base_genre_nombre, nom_fichier+"\t"+err_base_genre_nb, nom_fichier+"\t"+normes_base_genre_nb,)
 
+
+'''
+Main : Récupère les sorties d'AliAdj, lance la fonction stats dessus, sotcke
+		les résultats au fur et à mesure puis les écrit dans un nouveau
+		fichier (stats_erreurs.csv)
+'''
 if __name__ == '__main__':
 	
 	dossier = "../AliAdj/resultats/"
@@ -107,11 +123,11 @@ if __name__ == '__main__':
 	fichier_sortie = open("stats_erreurs.csv", encoding="utf8", mode="w")
 	fichier_sortie.write("Niveau\tMots normes\tErreurs bases\tErreurs flexions genre\tErreurs flexions nombre\n")
 	
-	#mots normésvs bases erronées vs genre_nb genre erronées vs genre_nb nb erronées
+	#mots normés vs bases erronées vs flex genre erronées vs flex nb erronées
 	err_base_genre_nombre = []
-	#mots normés vs bases erronées vs base+genre_nbions erronées vs genre_nbons erronées
+	#mots normés vs bases erronées vs base+flexions erronées vs flex erronées
 	err_base_genre_nb = []
-	#bases normees vs bases erronées + genre_nbions normées vs genre_nbions erronées
+	#bases normees vs bases erronées + flexions normées vs flexions erronées
 	normes_base_genre_nb = []
 	
 	#calculs des comparaisons précédentes
